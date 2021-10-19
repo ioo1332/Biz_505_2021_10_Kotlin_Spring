@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<th:block th:replace="fragment/headerAndFooter::headFragment"></th:block>
+
+<body>
+<th:block th:replace="fragment/headerAndFooter::headerFragment"></th:block>
+<th:block th:replace="fragment/headerAndFooter::navFragment"></th:block>
+
+<table>
+<tr class="main_tr">
+    <td>고객ID</td>
+    <td>이름</td>
+    <td>전화번호</td>
+    <td>주소</td>
+    <td>담당자명</td>
+    <td>담당자연락처</td>
+    <td>매출액합계(만원)</td>
+</tr>
+    <tr>
+        <td>B001</td>
+        <td>롯데상사</td>
+        <td>02-222-9999</td>
+        <td>서울시 영등포구</td>
+        <td>홍길동</td>
+        <td>010-9999-8766</td>
+        <td>91,000</td>
+    </tr>
+    <tr>
+        <td>B002</td>
+        <td>롯데상사</td>
+        <td>02-222-9999</td>
+        <td>서울시 영등포구</td>
+        <td>홍길동</td>
+        <td>010-9999-8766</td>
+        <td>91,000</td>
+    </tr>
+</table>
+<th:block th:replace="fragment/headerAndFooter::footerFragment"></th:block>
+</body>
+</html>
