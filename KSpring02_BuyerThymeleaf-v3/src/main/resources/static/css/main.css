@@ -41,9 +41,7 @@ footer {
     padding:1rem;
 }
 
-div.btn_box {
-    text-align:right;
-}
+
 
 table.buyer_list {
     width: 80%;
@@ -57,6 +55,23 @@ table.buyer_list th {
 }
 
 table.buyer_list th, table.buyer_list td {
+    border-bottom: 1px solid #ddd;
+    padding:1em;
+    text-align: center;
+}
+
+table.order_list {
+    width: 80%;
+    margin:10px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.order_list th {
+    background-color: gray;
+}
+
+table.order_list th, table.order_list td {
     border-bottom: 1px solid #ddd;
     padding:1em;
     text-align: center;

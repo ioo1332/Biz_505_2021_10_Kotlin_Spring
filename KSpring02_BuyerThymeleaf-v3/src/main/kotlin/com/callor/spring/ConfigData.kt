@@ -13,7 +13,7 @@ class ConfigData {
 
         val RND= Random(System.currentTimeMillis())
 
-        val BUYYER_LIST=arrayOf(
+        val BUYER_LIST=arrayOf(
             Buyer(userid = "B001",
                 name = "홍길동",
                 address = "서울시",

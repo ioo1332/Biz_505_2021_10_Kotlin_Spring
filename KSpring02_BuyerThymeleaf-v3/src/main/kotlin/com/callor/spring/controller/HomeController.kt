@@ -51,12 +51,10 @@ class HomeController {
 
 
     /**
-     *
      * @ResponseBody
      * 문자열, 객체, 배열 등등의 모든 데이터를
      * 있는 그대로 또는 JSON 형태로 변환하여
      * client 에 보내라
-     *
      */
     @ResponseBody
     @RequestMapping(value=["/list"],method=[RequestMethod.GET])

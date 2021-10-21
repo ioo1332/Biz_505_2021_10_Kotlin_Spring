@@ -1,4 +1,3 @@
-
 // 바닐라 JS
 // document.addEventListener("DOMContentLoaded",function(){
 // })

@@ -1,12 +1,13 @@
 package com.callor.spring.service.impl
 
 import com.callor.spring.ConfigData
-import com.callor.spring.ConfigData.Companion.BUYYER_LIST
+import com.callor.spring.ConfigData.Companion.BUYER_LIST
 import com.callor.spring.models.Buyer
 import com.callor.spring.repostitory.BuyerRepository
 import com.callor.spring.service.BuyerService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import java.util.*
 import kotlin.random.Random
 
 /**
@@ -23,21 +24,25 @@ class BuyerServiceImplV1(val bRepo:BuyerRepository):BuyerService {
 
 
     override fun selectAll(): Array<Buyer> {
-        return ConfigData.BUYYER_LIST
+        return bRepo.findAll().toTypedArray()
     }
 
     override fun findById(userid: String): Buyer {
-        val findUser= ConfigData.BUYYER_LIST.filter { buyer -> buyer.userid==userid }
-        return findUser[0]
+        // repository findById()는
+        // 실제데이터를 optional 이라는 특별한 객체로 wrapping 하여 가져온다
+        // 필요한 데이터는 .get()method를 사용하여
+        // 한번 더 추출해주어야한다
+        val buyer:Optional<Buyer> =bRepo.findById(userid)
+        return buyer.get()
     }
 
     override fun findByName(name: String): Array<Buyer> {
-        val userNum=ConfigData.RND.nextInt(BUYYER_LIST.size)
-        return arrayOf(BUYYER_LIST[userNum])
+
+        return bRepo.findByName(name)
     }
 
-    override fun findByTel(name: String): Array<Buyer> {
-        TODO("Not yet implemented")
+    override fun findByTel(tel: String): Array<Buyer> {
+        return bRepo.findByTel(tel)
     }
 
     override fun insert(buyer: Buyer): Buyer {
@@ -45,11 +50,11 @@ class BuyerServiceImplV1(val bRepo:BuyerRepository):BuyerService {
         return bRepo.save(buyer)
     }
 
-    override fun delete(userid: String): Buyer {
-        TODO("Not yet implemented")
+    override fun delete(userid: String) {
+       bRepo.deleteById(userid)
     }
 
     override fun update(buyer: Buyer): Buyer {
-        TODO("Not yet implemented")
+        return bRepo.save(buyer)
     }
 }
