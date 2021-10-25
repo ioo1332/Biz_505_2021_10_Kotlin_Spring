@@ -1,0 +1,35 @@
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{/layout}"
+>
+<section layout:fragment="content" class="order_detail">
+    <script th:inline="javascript">
+
+        const seq = /*[[ ${SALE.seq} ]]*/ null
+    </script>
+
+    <div>
+        <label >seq</label><span th:text="${SALE.seq}">seq</span>
+        <label>userid</label><span  th:text="${SALE.userid}">userid</span>
+    </div>
+    <div>
+        <label>pname</label><span th:text="${SALE.pname}">pname</span>
+        <label>amt</label><span  th:text="${SALE.amt}">amt</span>
+    </div>
+    <div>
+        <label>qty</label><span  th:text="${SALE.qty}">qty</span>
+        <label>total</label><span  th:text="${SALE.total}">total</span>
+    </div>
+    <div>
+        <button class="btn_update">수정</button>
+        <button class="btn_delete btn_warring">삭제</button>
+        <button class="btn_lsit">리스트로</button>
+    </div>
+    <script>
+    $(function(){
+        $("button.btn_insert").on("click",function(){
+
+        })
+      })
+    </script>
+</section>

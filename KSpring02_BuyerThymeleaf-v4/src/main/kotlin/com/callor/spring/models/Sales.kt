@@ -3,6 +3,9 @@ package com.callor.spring.models
 import java.util.*
 import javax.persistence.*
 
+import java.util.*
+import javax.persistence.*
+
 /**
  * Id 칼럼을 자동 증가 옵션으로 자동 생성하기
  * SEQUENCE, IDENTITY, TABLE, AUTO

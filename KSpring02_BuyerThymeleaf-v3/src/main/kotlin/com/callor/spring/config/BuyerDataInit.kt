@@ -13,12 +13,12 @@ import org.springframework.transaction.annotation.Transactional
 
 // project가 시작될때 무엇인가 실행하라
 @SpringBootApplication
-class DataInit {
+class BuyerDataInit {
 
-    private val logger=LoggerFactory.getLogger(DataInit::class.java)
+    private val logger=LoggerFactory.getLogger(BuyerDataInit::class.java)
 
     val names= listOf("홍길동","이몽룡","성춘향","임꺽정","장보고")
-
+    // setter 주입방식
     @Autowired
     private lateinit var bDao:BuyerRepository
 

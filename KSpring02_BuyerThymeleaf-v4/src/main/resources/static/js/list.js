@@ -23,11 +23,10 @@ $(()=>{
 
     // const tableClickHandler = () =>{  }
     // const tableClickHandler = function() {  }
-     function tableClickHandler() {
-          const id = $(this).data("id")
-          location.href = `${rootPath}/buyer/detail?userid=${id}`
-      }
-      $("table.buyer_list tr").on("click", tableClickHandler)
-
+    function tableClickHandler() {
+        const id = $(this).data("id")
+        location.href = `${rootPath}/buyer/detail?userid=${id}`
+    }
+    $("table.buyer_list tr").on("click", tableClickHandler)
 
 })
