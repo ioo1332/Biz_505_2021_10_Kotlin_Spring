@@ -1,0 +1,10 @@
+<tr class="buyer_tr" th:each="BUYER : ${BUYERS}" th:data-id="${BUYER.userid}">
+
+    <td th:text="${BUYER.userid}">B001</td>
+    <td th:text="${BUYER.name}">롯데상사</td>
+    <td th:text="${BUYER.tel}">02-1111-1111</td>
+    <td th:text="${BUYER.address}">서울시</td>
+    <td th:text="${BUYER.manager}">홍길동</td>
+    <td th:text="${BUYER.man_tel}">010-1111-1111</td>
+    <td th:text="${BUYER.buy_total}">10000</td>
+</tr>

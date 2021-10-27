@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    database-platform: "org.hibernate.dialect.MySQL8Dialect"
+    database: mysql
+    properties:
+      hibernate:
+        jdbc.batch_size: 50
+        order_insert: true
+        otrder_updates: true
+        format_sql: true
+
+    show-sql: true

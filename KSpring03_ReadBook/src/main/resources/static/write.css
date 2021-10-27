@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+thead{
+    align-items: center;
+    margin: 0px auto;
+    background-color: gray;
+}
+button.btn_save{
+    background-color:blue;
+}
+button.btn_rewrite{
+    background-color:red;
+}
+button.btn_list{
+    background-color:yellow;
+}

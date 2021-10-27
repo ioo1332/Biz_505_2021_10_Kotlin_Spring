@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<form method="post" class="write_form">
+    <section>
+        <thead>
+        <h1>READ BOOK</h1>
+        <h3>똑 소리나는 독서록 2021 v1</h3>
+        </thead>
+        <table>
+            <tbody>
+                <div>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                </div>
+            </tbody>
+        </table>
+        <div>
+            <button class="btn_save">저장</button>
+            <button class="btn_rewrite">새로작성</button>
+            <button class="btn_list">리스트보기</button>
+        </div>
+    </section>
+</form>
+<script>
+    $(function(){
+        $("button.btn_save").on("click", function(){
+            alert("save")
+            $("form.write_form").submit()
+        })
+    })
+
+</script>
+</html>
