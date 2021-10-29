@@ -3,10 +3,35 @@
     margin: 0;
     padding: 0;
 }
-thead{
-    align-items: center;
-    margin: 0px auto;
-    background-color: gray;
+header {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+form.write_form {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+form.write_form input{
+    padding: 1rem;
+    margin:0.5rem;
+    border: 1px solid black;
+}
+
+div.button_div {
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+}
+
+button{
+    border: none;
+    border-radius: 1rem;
+    padding:0.5rem 1rem;
+
 }
 button.btn_save{
     background-color:blue;

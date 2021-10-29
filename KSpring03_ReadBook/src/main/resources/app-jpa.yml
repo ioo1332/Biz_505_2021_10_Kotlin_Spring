@@ -4,7 +4,8 @@ spring:
     database: mysql
     properties:
       hibernate:
-        jdbc.batch_size: 50
+        jdbc:
+          batch_size: 50
         order_insert: true
         otrder_updates: true
         format_sql: true

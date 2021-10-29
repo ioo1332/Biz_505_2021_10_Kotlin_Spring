@@ -9,7 +9,7 @@ import javax.persistence.Table
 @Table(name = "tbl_book", schema = "naraDB")
 data class Book(
     @Id
-    @Column(columnDefinition="CHAR(4)", nullable = false)
+    @Column(columnDefinition="CHAR(4)", nullable = false,unique = true)
     var isbn: String? = null,
     @Column(columnDefinition="VARCHAR(25)", nullable = false)
     var title: String? = null,

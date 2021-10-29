@@ -1,15 +1,13 @@
 package com.callor.readbook.model
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
 
 @Entity
 @Table(name="tbl_readbook", schema = "naraDB")
 data class ReadBook(
     @Id
-    @Column(columnDefinition = "BIGINT", nullable = false)
+    @Column(columnDefinition = "BIGINT", nullable = false ,unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var seq: String?= null,
     @Column(columnDefinition = "CHAR(4)", nullable = false)
     var isbn: String?= null,
